@@ -16,7 +16,15 @@ function App() {
   var ball = null;
   var light = null;
 
+  var mouseX = 0;
+  var mouseY = 0;
+
+  var windowHalfX = window.innerWidth / 2;
+  var windowHalfY = window.innerHeight / 2;
+
+
   useEffect(() => {
+    // common used
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     scene.background = new THREE.Color('#ECF0F1');
@@ -25,7 +33,15 @@ function App() {
 
     // if (window.screen.width <= 768) { camera.position.z = 20; }
     document.body.appendChild(renderer.domElement);
+    document.addEventListener('mousemove', onDocumentMouseMove, false);
+    document.addEventListener('mousewheel', onDocumentMouseWheel, false);
 
+    drawLogo();
+    animate();
+
+  }, []);
+
+  function drawLogo() {
     // big mesh background
     const geometry = new THREE.BoxGeometry(200, 200, 200);
     const materialB = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
@@ -67,25 +83,40 @@ function App() {
     group.add(letterE4);
 
     scene.add(ball, group, mesh, light);
+  }
 
-    var animate = function () {
-      window.requestAnimationFrame(() => animate());
-      mesh.rotation.x += 0.001;
-      mesh.rotation.y += 0.002;
-      renderer.render(scene, camera);
+  function animate() {
+    window.requestAnimationFrame(() => animate());
+    mesh.rotation.x += 0.001;
+    mesh.rotation.y += 0.002;
+    renderer.render(scene, camera);
 
-      // rotate letterE
-      letterE.rotation.y += 0.01;
-      letterE2.rotation.y += 0.01;
-      letterE3.rotation.y += 0.01;
-      letterE4.rotation.y += 0.01;
+    camera.position.x += (mouseX - camera.position.x) * .05;
+    camera.position.y += (- mouseY - camera.position.y) * .05;
 
-      renderer.render(scene, camera);
-    };
-    animate();
+    // rotate letterE
+    letterE.rotation.y += 0.01;
+    letterE2.rotation.y += 0.01;
+    letterE3.rotation.y += 0.01;
+    letterE4.rotation.y += 0.01;
 
-  }, []);
+    renderer.render(scene, camera);
+  };
 
+  function onDocumentMouseMove(event) {
+    mouseX = (event.clientX - windowHalfX) / 100;
+    mouseY = (event.clientY - windowHalfY) / 100;
+  }
+
+  function onDocumentMouseWheel(event) {
+    // var fovMAX = 160;
+    // var fovMIN = 1;
+
+    // camera.fov -= event.wheelDeltaY * 0.05;
+    // camera.fov = Math.max(Math.min(camera.fov, fovMAX), fovMIN);
+    // camera.projectionMatrix = new THREE.Matrix4().makePerspective(camera.fov, window.innerWidth / window.innerHeight, camera.near, camera.far);
+
+  }
 
   return (
     <div id="root" className="App"></div>
