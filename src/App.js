@@ -33,8 +33,13 @@ function App() {
 
     // if (window.screen.width <= 768) { camera.position.z = 20; }
     document.body.appendChild(renderer.domElement);
-    document.addEventListener('mousemove', onDocumentMouseMove, false);
-    document.addEventListener('mousewheel', onDocumentMouseWheel, false);
+
+    if (window.screen.width >= 1024) {
+      document.addEventListener('mousemove', onDocumentMouseMove, true)
+    } else {
+      document.addEventListener('mousemove', onDocumentMouseMove, false)
+    }
+
 
     drawLogo();
     animate();
@@ -106,16 +111,6 @@ function App() {
   function onDocumentMouseMove(event) {
     mouseX = (event.clientX - windowHalfX) / 100;
     mouseY = (event.clientY - windowHalfY) / 100;
-  }
-
-  function onDocumentMouseWheel(event) {
-    // var fovMAX = 160;
-    // var fovMIN = 1;
-
-    // camera.fov -= event.wheelDeltaY * 0.05;
-    // camera.fov = Math.max(Math.min(camera.fov, fovMAX), fovMIN);
-    // camera.projectionMatrix = new THREE.Matrix4().makePerspective(camera.fov, window.innerWidth / window.innerHeight, camera.near, camera.far);
-
   }
 
   return (
