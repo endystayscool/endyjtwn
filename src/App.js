@@ -136,10 +136,10 @@ function App() {
         <p>&#x27B2; Endy Jatawan</p>
       </div>
       <div className={about}>
-        <p>Moin! 👋  My name is Endy, a rookie developer from Thailand, currently based in Germany. I'm a master's student in Digital Media at Bremen University and I'm also working as a Web and iOS Developer in a software company in Bremen. </p>
-        <p>Before now, I worked as a Front-End Web Developer in Bangkok, Thailand for 2 years, I also took internships as a Front-End Developer and Digital Marketer in Macedonia and Ukraine 👩🏻‍💻, after I graduated in Computer Science major in Computer Graphics from Thammasat University.</p>
-        <p>My obsession with technology and innovation began after I was a Student Volunteer at the SIGGRAPH conference in Macao (2016). ✨That experience enhances my interest in computer graphics, especially Creative Coding. Seeing much amazing research makes me want to create expressive and interactive technology that allows me to express my creativity together with programming skills.</p>
-        <p>In my spare time, I love filming, skateboarding, surfing 🏄🏽‍♀️, sunbathing, and hanging out with my friends. I also started making music during the quarantine as well.</p>
+        <p>Moin! 👋  My name is <a href="https://drive.google.com/file/d/1tnBWIrfmrNYceC1ndgjodLy74m4ZYQcn/view?usp=sharing" target="_blank">Endy</a>, a rookie developer from Thailand, currently based in Germany. I'm a master's student in Digital Media at Bremen University and I'm also working as a Web and iOS Developer in a software company in Bremen. </p>
+        <p>Before now, I worked as a Front-End Web Developer in Bangkok, Thailand for 2 years, I also took internships as a Front-End Developer and Digital Marketer in Macedonia and <a href="https://vimeo.com/447637884" target="_blank">Ukraine</a> 👩🏻‍💻, after I graduated in Computer Science major in Computer Graphics from Thammasat University.</p>
+        <p>My obsession with technology and innovation began after I was a Student Volunteer at the SIGGRAPH conference in Macao (2016). ✨That experience enhances my interest in computer graphics, especially Creative Coding. Seeing much amazing research makes me want to create <a href="https://vimeo.com/437607849" target="_blank">expressive</a> and <a href="https://vimeo.com/437614715" target="_blank">interactive technology</a> that allows me to express my creativity together with programming skills.</p>
+        <p>In my spare time, I love filming, skateboarding, surfing 🏄🏽‍♀️, sunbathing, and hanging out with my friends. I also started making <a href="https://soundcloud.com/user-828959449" target="_blank">music</a> during the quarantine as well.</p>
         {/* <p>If you are interested in my profile, feel free to reach out! </p> */}
         <div className={close} onClick={isClosed}>
           <code>&#215;</code>
