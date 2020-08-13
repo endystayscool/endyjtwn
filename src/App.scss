@@ -21,7 +21,7 @@
     bottom: 1rem;
     background: #5781F8;
     width: 100%;
-    color: #fff;
+    color: #fff;  
 
     // tablet
     @media only screen 
@@ -42,6 +42,18 @@
         height: 80%;
         overflow-y: auto;
     }
+}
+
+.close-about {
+    z-index: 100;
+    position: absolute;
+    cursor: pointer;
+    color: #232323;
+    background: #bada55;
+    font-size: 24px;
+    right: 1rem;
+    top: -2rem;
+    padding: 10px;
 }
 
 p {

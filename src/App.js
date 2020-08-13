@@ -26,6 +26,7 @@ function App() {
 
   const [aboutClass, setAboutClass] = useState("title-about");
   const [about, setAbout] = useState("hide");
+  const [close, setClose] = useState("hide");
 
   useEffect(() => {
     // common used
@@ -120,6 +121,13 @@ function App() {
   function isClicked(event) {
     setAboutClass("hide");
     setAbout("about");
+    setClose("close-about");
+  }
+
+  function isClosed(event) {
+    setAboutClass("title-about");
+    setAbout("hide");
+    setClose("hide");
   }
 
   return (
@@ -133,7 +141,11 @@ function App() {
         <p>My obsession with technology and innovation began after I was a Student Volunteer at the SIGGRAPH conference in Macao (2016). ✨That experience enhances my interest in computer graphics, especially Creative Coding. Seeing much amazing research makes me want to create expressive and interactive technology that allows me to express my creativity together with programming skills.</p>
         <p>In my spare time, I love filming, skateboarding, surfing 🏄🏽‍♀️, sunbathing, and hanging out with my friends. I also started making music during the quarantine as well.</p>
         {/* <p>If you are interested in my profile, feel free to reach out! </p> */}
+        <div className={close} onClick={isClosed}>
+          <code>&#215;</code>
+        </div>
       </div>
+
     </div>
   );
 }
