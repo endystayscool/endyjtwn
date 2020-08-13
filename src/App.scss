@@ -1,0 +1,33 @@
+.title-about {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    bottom: 1rem;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+.about {
+    position: absolute;
+    display: flex;
+    bottom: 1rem;
+    background: #5781F8;
+    width: 100%;
+    color: #fff;
+
+    @media only screen 
+    and (max-device-width: 768px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        display: block;
+    }
+}
+
+p {
+    padding: 1rem;
+}

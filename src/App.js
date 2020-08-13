@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as THREE from 'three';
+
+import "./App.scss";
 
 function App() {
 
@@ -22,24 +24,21 @@ function App() {
   var windowHalfX = window.innerWidth / 2;
   var windowHalfY = window.innerHeight / 2;
 
+  const [aboutClass, setAboutClass] = useState("title-about");
+  const [about, setAbout] = useState("hide");
 
   useEffect(() => {
     // common used
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-    scene.background = new THREE.Color('#ECF0F1');
+    scene.background = new THREE.Color('#232323');
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.position.z = 10;
 
     // if (window.screen.width <= 768) { camera.position.z = 20; }
     document.body.appendChild(renderer.domElement);
-
-    if (window.screen.width >= 1024) {
-      document.addEventListener('mousemove', onDocumentMouseMove, true)
-    } else {
-      document.addEventListener('mousemove', onDocumentMouseMove, false)
-    }
-
+    console.log(window.screen.width);
+    document.addEventListener('mousemove', onDocumentMouseMove, true)
 
     drawLogo();
     animate();
@@ -64,10 +63,15 @@ function App() {
     letterE4 = new THREE.Mesh(geometryE2, material);
     // scene.add(letterE, letterE2, letterE3, letterE4);
 
+    const bballGeometry = new THREE.SphereGeometry(8, 20, 20);
+    const bballMaterial = new THREE.MeshBasicMaterial({ color: '#B680F3' });
+    var bball = new THREE.Mesh(bballGeometry, bballMaterial);
+    bball.position.z = -11;
+
     const ballGeometry = new THREE.SphereGeometry(6.5, 20, 20);
     const ballMaterial = new THREE.MeshBasicMaterial({ color: '#ffffff' });
     ball = new THREE.Mesh(ballGeometry, ballMaterial);
-    ball.position.z = -10;
+    ball.position.z = -7;
 
     // add light to the scene
     light = new THREE.PointLight(0xFFFF00);
@@ -87,7 +91,7 @@ function App() {
     group.add(letterE3);
     group.add(letterE4);
 
-    scene.add(ball, group, mesh, light);
+    scene.add(bball, ball, group, mesh, light);
   }
 
   function animate() {
@@ -113,8 +117,22 @@ function App() {
     mouseY = (event.clientY - windowHalfY) / 100;
   }
 
+  function isClicked(event) {
+    setAboutClass("hide");
+    setAbout("about");
+  }
+
   return (
-    <div id="root" className="App"></div>
+    <div id="root" className="App">
+    <div className={aboutClass} onClick={isClicked}>about</div>
+      <div className={about}>
+        <p>Moin! 👋  I'm a rookie developer from Thailand, currently based in Bremen, Germany. My name is Endy, a master's student in Digital Media at Bremen University. I'm also working as a Web and iOS Developer in a software company in Bremen. </p>
+        <p>Before now, I worked as a Front-End Developer in Thailand for 2 years, I also took internships as a Front-End Developer and Digital Marketer in Macedonia and Ukraine 👩🏻‍💻, after I graduated in Computer Science major in Computer Graphics from Thammasat University.</p>
+        <p>My obsession with technology and innovation began after I was a Student Volunteer at the SIGGRAPH conference in Macao (2016) that enhance my interest in Creative Coding, which is the combination of graphic design and programming that creates an expressive and interactive technology.</p>
+        <p>In my spare time, I love filming, skateboarding, surfing 🏄🏽‍♀️, sunbathing, and hanging out with my friends. I also started composing music during the quarantine as well.</p>
+        {/* <p>If you are interested in my profile, feel free to reach out! </p> */}
+      </div>
+    </div>
   );
 }
 
