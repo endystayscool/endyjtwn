@@ -124,7 +124,9 @@ function App() {
 
   return (
     <div id="root" className="App">
-    <div className={aboutClass} onClick={isClicked}>about</div>
+      <div className={aboutClass} onClick={isClicked}>
+        <p>&#x27B2; Endy Jatawan</p>
+      </div>
       <div className={about}>
         <p>Moin! 👋  I'm a rookie developer from Thailand, currently based in Bremen, Germany. My name is Endy, a master's student in Digital Media at Bremen University. I'm also working as a Web and iOS Developer in a software company in Bremen. </p>
         <p>Before now, I worked as a Front-End Developer in Thailand for 2 years, I also took internships as a Front-End Developer and Digital Marketer in Macedonia and Ukraine 👩🏻‍💻, after I graduated in Computer Science major in Computer Graphics from Thammasat University.</p>
