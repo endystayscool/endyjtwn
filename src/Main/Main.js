@@ -162,8 +162,14 @@ import * as THREE from 'three';
 import "./Main.scss";
 
 function Main() {
+    const [background, setBackground] = useState('#232323');
+
+    function mouseMovement(e) {
+        e.clientX <= window.innerWidth / 2 ? setBackground('#fff') : setBackground('#232323');
+    }
+
     return (
-        <div id="root" className="be-back">
+        <div id="root" className="be-back" style={{ background: background }} onMouseMove={mouseMovement}>
             <code>I'll be back.</code>
         </div>
     );
