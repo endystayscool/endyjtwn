@@ -10,9 +10,7 @@ import { CopyShader } from 'three/examples/jsm/shaders/CopyShader.js';
 
 import "./Work.scss";
 
-import b from './IMG_5842.jpg';
-import test from './test.jpg';
-import test2 from './758px-Canestra_di_frutta_(Caravaggio).jpg';
+import bg from './IMG_5842.jpg';
 
 function Work() {
 
@@ -67,7 +65,7 @@ function Work() {
 
         // var texture1 = new THREE.TextureLoader().load(b);
         // texture1.minFilter = THREE.LinearFilter;
-        var texture2 = new THREE.TextureLoader().load(b);
+        var texture2 = new THREE.TextureLoader().load(bg);
 
         // var texturePass1 = new TexturePass(texture1);
         var texturePass2 = new TexturePass(texture2);
@@ -131,7 +129,12 @@ function Work() {
 
     return (
         <div className="Work">
-            <code className="be-back">I'll be back.</code>
+            <a target="_blank" href="https://www.linkedin.com/in/endy-jatawan-2a7620129">
+                <code className="be-back">Endy Jatawan</code>
+            </a>
+            <a target="_blank" href="https://vimeo.com/endystayscool">
+                <code className="sub-be-back">Portfolio</code>
+            </a>
         </div>
     );
 }
