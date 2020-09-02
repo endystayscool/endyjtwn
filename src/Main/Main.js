@@ -10,13 +10,15 @@
 //     var scene = null;
 //     var camera = null;
 
-//     var mesh = null;
-//     var group = null;
+//     var groupE = null;
 //     var letterE = null;
 //     var letterE2 = null;
 //     var letterE3 = null;
 //     var letterE4 = null;
-//     var ball = null;
+//     var groupN = null;
+//     var letterN = null;
+//     var letterN2 = null;
+//     var letterN3 = null;
 //     var light = null;
 
 //     var mouseX = 0;
@@ -34,7 +36,7 @@
 //         // common used
 //         scene = new THREE.Scene();
 //         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-//         scene.background = new THREE.Color('#232323');
+//         scene.background = new THREE.Color('#fbfbfb');
 //         renderer.setSize(window.innerWidth, window.innerHeight);
 //         camera.position.z = 10;
 
@@ -49,38 +51,37 @@
 //     }, []);
 
 //     function drawLogo() {
-//         // big mesh background
-//         const geometry = new THREE.BoxGeometry(200, 200, 200);
-//         const materialB = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
-//         mesh = new THREE.Mesh(geometry, materialB);
-
 //         // plain dark grey letterE
 //         const geometryE = new THREE.BoxGeometry(1, 5, 1);
 //         const geometryE2 = new THREE.BoxGeometry(3, 1, 1);
-//         // const geometry = new THREE.BoxGeometry(1, 3, 1);
-
 //         const material = new THREE.MeshNormalMaterial();
 //         letterE = new THREE.Mesh(geometryE, material);
 //         letterE2 = new THREE.Mesh(geometryE2, material);
 //         letterE3 = new THREE.Mesh(geometryE2, material);
 //         letterE4 = new THREE.Mesh(geometryE2, material);
-//         // scene.add(letterE, letterE2, letterE3, letterE4);
 
-//         const bballGeometry = new THREE.SphereGeometry(8, 20, 20);
-//         const bballMaterial = new THREE.MeshBasicMaterial({ color: '#B680F3' });
-//         var bball = new THREE.Mesh(bballGeometry, bballMaterial);
-//         bball.position.z = -11;
+//         // plain dark grey letterE
+//         const geometryN = new THREE.BoxGeometry(1, 5, 1);
+//         const geometryN2 = new THREE.BoxGeometry(5, 1, 1);
+//         letterN = new THREE.Mesh(geometryN, material);
+//         letterN2 = new THREE.Mesh(geometryN2, material);
+//         letterN3 = new THREE.Mesh(geometryN, material);
 
-//         const ballGeometry = new THREE.SphereGeometry(6.5, 20, 20);
-//         const ballMaterial = new THREE.MeshBasicMaterial({ color: '#ffffff' });
-//         ball = new THREE.Mesh(ballGeometry, ballMaterial);
-//         ball.position.z = -7;
+//         // const bballGeometry = new THREE.SphereGeometry(8, 20, 20);
+//         // const bballMaterial = new THREE.MeshBasicMaterial({ color: '#B680F3' });
+//         // var bball = new THREE.Mesh(bballGeometry, bballMaterial);
+//         // bball.position.z = -11;
+
+//         // const ballGeometry = new THREE.SphereGeometry(6.5, 20, 20);
+//         // const ballMaterial = new THREE.MeshBasicMaterial({ color: '#fbfbfb' });
+//         // ball = new THREE.Mesh(ballGeometry, ballMaterial);
+//         // ball.position.z = -7;
 
 //         // add light to the scene
 //         light = new THREE.PointLight(0xFFFF00);
 //         light.position.set(10, 0, 25);
 
-//         // shift letterE on the x axis
+//         // shift letter E on the x axis
 //         letterE.position.x = -1.5;
 //         letterE2.position.x = 0.5;
 //         letterE2.position.y = 2;
@@ -88,29 +89,58 @@
 //         letterE3.position.y = -2;
 //         letterE4.position.x = 0.5;
 
-//         group = new THREE.Group();
-//         group.add(letterE);
-//         group.add(letterE2);
-//         group.add(letterE3);
-//         group.add(letterE4);
+//         // shift letter N on the x axis
+//         letterN.position.x = -1.5;
+//         letterN2.rotation.z = 5.3;
+//         letterN3.position.x = 1.5;
 
-//         scene.add(bball, ball, group, mesh, light);
+//         groupE = new THREE.Group();
+//         groupE.add(letterE);
+//         groupE.add(letterE2);
+//         groupE.add(letterE3);
+//         groupE.add(letterE4);
+
+//         groupN = new THREE.Group();
+//         groupN.add(letterN);
+//         groupN.add(letterN2);
+//         groupN.add(letterN3);
+
+//         groupE.position.x = -4;
+//         groupE.position.y = -4;
+//         groupE.rotation.y = 1;
+
+//         groupN.position.x = -1.5;
+//         groupN.position.y = -4;
+//         groupN.position.z = -4;
+//         groupN.rotation.y = 1;
+
+//         scene.add(groupE, groupN, light);
+//         window.addEventListener('resize', onWindowResize, false);
+//     }
+
+//     function onWindowResize() {
+
+//         var width = window.innerWidth;
+//         var height = window.innerHeight;
+
+//         camera.aspect = width / height;
+//         camera.updateProjectionMatrix();
+
+//         renderer.setSize(width, height);
 //     }
 
 //     function animate() {
 //         window.requestAnimationFrame(() => animate());
-//         mesh.rotation.x += 0.001;
-//         mesh.rotation.y += 0.002;
 //         renderer.render(scene, camera);
 
 //         camera.position.x += (mouseX - camera.position.x) * .05;
 //         camera.position.y += (- mouseY - camera.position.y) * .05;
 
 //         // rotate letterE
-//         letterE.rotation.y += 0.01;
-//         letterE2.rotation.y += 0.01;
-//         letterE3.rotation.y += 0.01;
-//         letterE4.rotation.y += 0.01;
+//         // letterE.rotation.y += 0.005;
+//         // letterE2.rotation.y += 0.005;
+//         // letterE3.rotation.y += 0.005;
+//         // letterE4.rotation.y += 0.005;
 
 //         renderer.render(scene, camera);
 //     };
