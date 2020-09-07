@@ -2,6 +2,8 @@ import React from 'react';
 import './App.scss';
 import Main from './Main/Main';
 import Work from './Work/Work';
+import Test from './Test/Test';
+
 
 import {
   BrowserRouter as Router,
@@ -16,9 +18,12 @@ function App() {
       <Router>
         <Switch>
           <Route path="/">
+            <Test />
+          </Route>
+          <Route path="/work">
             <Work />
           </Route>
-          <Route path="/main">
+          <Route path="/test">
             <Main />
           </Route>
         </Switch>

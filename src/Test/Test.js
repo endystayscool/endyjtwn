@@ -13,10 +13,10 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { RGBShiftShader } from 'three/examples/jsm/shaders/RGBShiftShader.js';
 import { DotScreenShader } from 'three/examples/jsm/shaders/DotScreenShader.js';
 
-import "./Work.scss";
+import "./Test.scss";
 
 
-function Work() {
+function Test() {
 
     var camera, scene, renderer, composer;
     var object, light;
@@ -93,8 +93,8 @@ function Work() {
 
         requestAnimationFrame(animate);
 
-        object.rotation.x += 0.005;
-        object.rotation.y += 0.01;
+        object.rotation.x += 0.0005;
+        object.rotation.y += 0.001;
 
         composer.render();
 
@@ -102,15 +102,15 @@ function Work() {
     // end based
 
     return (
-        <div className="Work">
+        <div className="Test">
             <a target="_blank" href="https://www.linkedin.com/in/endy-jatawan-2a7620129">
-                <code className="be-back">Endy Jatawan</code>
+                <code className="be-back">be right back...</code>
             </a>
-            <a target="_blank" href="https://vimeo.com/endystayscool">
+            {/* <a target="_blank" href="https://vimeo.com/endystayscool">
                 <code className="sub-be-back">Portfolio</code>
-            </a>
+            </a> */}
         </div>
     );
 }
 
-export default Work;
+export default Test;
