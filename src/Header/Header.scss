@@ -29,6 +29,7 @@
     width: 8rem;
     min-width: 85px;
     max-width: 190px;
+    max-height: 128px;
     height: auto;
     margin: 1rem;
     cursor: pointer;
@@ -39,6 +40,7 @@
          and (-webkit-min-device-pixel-ratio: 2) {
             width: 4rem;
             max-width: 85px;
+            max-height: 85px;
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
          }
