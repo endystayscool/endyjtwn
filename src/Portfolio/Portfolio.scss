@@ -1,0 +1,25 @@
+#myCanvasIdPort {
+    position: fixed;
+    z-index: -1;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    float: right;
+    padding-bottom: 1rem;
+
+        // mobile
+        @media only screen 
+        and (max-width: 813px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            height: auto;
+            position: relative;
+            top: 7rem;
+        }
+    
+}

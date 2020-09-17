@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,16 +26,35 @@
 
 <body>
   <div id="root"></div>
-  <!--
-      Hi,  
-    
-      In case you can't wait, 
-      check out my profile here -> https://www.linkedin.com/in/endy-jatawan-2a7620129
+  <script type="x-shader/x-vertex" id="vertexshader">
 
-      also some of my works -> https://vimeo.com/endystayscool
+    attribute float scale;
 
-      Cheers!
-    -->
+    void main() {
+
+      vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+      gl_PointSize = scale * ( 300.0 / - mvPosition.z );
+
+      gl_Position = projectionMatrix * mvPosition;
+
+    }
+
+  </script>
+
+  <script type="x-shader/x-fragment" id="fragmentshader">
+
+    uniform vec3 color;
+
+    void main() {
+
+      if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
+
+      gl_FragColor = vec4( color, 1.0 );
+
+    }
+
+  </script>
 </body>
 
 </html>

@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.scss';
-import Main from './Main/Main';
-import Work from './Work/Work';
+import Portfolio from './Portfolio/Portfolio';
 import Test from './Test/Test';
-
+import About from './About/About';
+import Contact from './Contact/Contact';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
@@ -17,14 +16,20 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/test">
             <Test />
           </Route>
-          <Route path="/work">
-            <Work />
+          <Route path="/contact">
+            <Contact />
           </Route>
-          <Route path="/test">
-            <Main />
+          <Route path="/portfolio">
+            <Portfolio />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <About />
           </Route>
         </Switch>
       </Router>

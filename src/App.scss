@@ -1,0 +1,35 @@
+body
+{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #232323;
+    font-size: 9pt;
+    font-weight: lighter;
+}
+
+::-moz-selection {
+    background:  #00ced1;
+    color: #fff;
+}
+::-webkit-selection {
+    background: #00ced1;
+    color: #fff;
+}
+::selection {
+    background: #00ced1;
+    color: #fff;
+}
+
+a {
+    color: #00ced1;
+}
+
+@keyframes text-shadow-pop-top {
+    0% {
+        text-shadow: 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555;
+        transform: translateY(0);
+    }
+    100% {
+        text-shadow: 0 -1px #555, 0 -5px #555, 0 -10px #555, 0 -15px #555;
+        transform: translateY(8px);
+    }
+}

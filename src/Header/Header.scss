@@ -1,0 +1,133 @@
+.the-header {
+    width: 100%;
+    height: auto;
+             // mobile
+         @media only screen 
+         and (max-width: 813px)
+         and (-webkit-min-device-pixel-ratio: 2) {
+            position: fixed;
+            background: #fff;
+            z-index: 1;
+         }
+}
+
+//* HEADER */
+.header {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+     // mobile
+     @media only screen 
+     and (max-width: 813px)
+     and (-webkit-min-device-pixel-ratio: 2) {
+        width: 100%;
+     }
+}
+.header .logo {
+    width: 8rem;
+    min-width: 85px;
+    max-width: 190px;
+    height: auto;
+    margin: 1rem;
+    cursor: pointer;
+
+         // mobile
+         @media only screen 
+         and (max-width: 813px)
+         and (-webkit-min-device-pixel-ratio: 2) {
+            width: 4rem;
+            max-width: 85px;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+         }
+}
+.header .logo:hover {
+    width: 8rem;
+    background-image: url(
+        https://enlight.nyc/img/color.gif
+        );
+
+        // mobile
+        @media only screen 
+        and (max-width: 813px)
+        and (-webkit-min-device-pixel-ratio: 2) 
+        {
+           background-image: none;
+        }
+}
+//* END HEADER */
+
+
+
+//* SUB-HEADER */
+.sub-header {
+    top: 1rem;
+    right: 1rem;
+    float: right;
+    position: fixed;
+    z-index: 1;
+
+    // mobile
+    @media only screen 
+    and (max-width: 813px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+       position: absolute;
+       right: 0rem;
+       display: flex;
+       top: 1rem;
+       font-size: 18px;
+    }
+
+    &-r {
+        text-decoration: none;
+        color: #232323;
+        font-size: 20px;
+        padding: 1rem;
+        background: none !important;
+    }
+
+    &-r:hover {background: #232323; animation: text-shadow-pop-top .6s both;}
+
+    .menu {
+        // mobile
+        @media only screen 
+        and (max-width: 813px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+    }
+    button.sc-hKFyIo.havfDN {
+        background: none !important;
+    }
+
+    .hamburger {
+        display: none;
+    
+            // mobile
+            @media only screen 
+            and (max-width: 813px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                display: flex;
+                position: relative;
+                right: 1rem;
+            }
+    }
+    .move-left {
+        background-color: #fff;
+        transform: translate(-110px,0);
+        -webkit-transform: translate(-110px,0); /** Safari & Chrome **/
+        -o-transform: translate(-110px,0); /** Opera **/
+        -moz-transform: translate(-110px,0); /** Firefox **/
+    }
+    .move-right {
+        transform: translate(10px,0);
+        -webkit-transform: translate(10px,0); /** Safari & Chrome **/
+        -o-transform: translate(10px,0); /** Opera **/
+        -moz-transform: translate(10px,0); /** Firefox **/
+    }
+}
+//* END SUB-HEADER */
