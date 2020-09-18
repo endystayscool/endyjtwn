@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Portfolio from './Portfolio/Portfolio';
-import Test from './Test/Test';
+import Loading from './Loading/Loading';
 import About from './About/About';
 import Contact from './Contact/Contact';
 
@@ -13,15 +13,16 @@ import {
 
 function App() {
 
-  if (window.location.pathname === '/') window.location.href = "https://www.endyjtwn.com/about";
+  if (window.location.pathname === '/') {
+    setTimeout(() => {
+      window.location.href = "https://www.endyjtwn.com/about";
+    }, 1000);
+  }
 
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/test">
-            <Test />
-          </Route>
           <Route path="/contact">
             <Contact />
           </Route>
@@ -32,7 +33,7 @@ function App() {
             <About />
           </Route>
           <Route path="/">
-            <Test />
+            <Loading />
           </Route>
         </Switch>
       </Router>
