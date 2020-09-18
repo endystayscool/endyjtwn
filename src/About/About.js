@@ -45,9 +45,9 @@ function About() {
 
             var mesh = new THREE.Mesh(geometry, material);
             mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
-            mesh.position.multiplyScalar(Math.random() * 400);
+            mesh.position.multiplyScalar(Math.random() * 250);
             mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
-            mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 50;
+            mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 40;
             object.add(mesh);
 
         }
@@ -100,8 +100,8 @@ function About() {
 
         var id = requestAnimationFrame(animate);
 
-        object.rotation.x += 0.005;
-        object.rotation.y += 0.01;
+        object.rotation.x += 0.0005;
+        object.rotation.y += 0.001;
 
         composer.render();
 
