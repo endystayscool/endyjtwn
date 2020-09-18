@@ -180,8 +180,8 @@ function About() {
                         makes me want to create expressive and interactive technology that allows me to express my creativity together with programming skills.
                         </p>
                     <p>
-                        In my spare time, I love filming, skateboarding, surfing 🏄🏽‍♀️, and hanging out with my friends.
-                        I also experimenting with projection mapping on audio-visual art using Touchdesigner.
+                        In my spare time, I love playing billiards, skateboarding, surfing 🏄🏽‍♀️, and hanging out with my friends.
+                        I am also experimenting with projection mapping on audio-visual art using Touchdesigner.
                         </p>
                 </div>
             </div>
