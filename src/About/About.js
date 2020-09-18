@@ -139,7 +139,7 @@ function About() {
                     if (arrL.length > 200 && arrL.length > 200) {
                         i++
                         arrS.push(i);
-                        if (arrS.length > 10) {
+                        if (arrS.length > 5) {
                             arrL = [];
                             arrR = [];
                             setAboutClass('content-shaking');

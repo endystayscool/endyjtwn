@@ -32,7 +32,7 @@ function App() {
             <About />
           </Route>
           <Route path="/">
-            <About />
+            <Test />
           </Route>
         </Switch>
       </Router>
