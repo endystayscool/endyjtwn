@@ -161,7 +161,7 @@ function About() {
         <>
             <div id="myCanvasId"></div>
             <Header />
-            <div className="wrap">
+            <div className="wrapper">
                 <div className={aboutClass}>
                     <p>I'm Endy,
                     a Bremen based Software Developer hailing from Bangkok.

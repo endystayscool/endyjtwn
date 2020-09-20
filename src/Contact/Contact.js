@@ -219,7 +219,7 @@ function Contact() {
             <div id="myCanvasIdContact"></div>
 
             <Header />
-            <div className="wrap">
+            <div className="wrapper">
                 <div className="content">
                     <p style={{ marginTop: '0' }}>
                         I'm open to new opportunities and friends. 🍻

@@ -3,7 +3,7 @@
     z-index: -1;
 }
 
-.wrap {
+.wrapper {
     position: relative;
     width: 50%;
     max-height: 70vh;
@@ -18,7 +18,7 @@
         max-height: none;
     }
 }
-.wrap::-webkit-scrollbar {
+.wrapper::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
@@ -31,6 +31,7 @@
     font-size: 16px;
     text-align: justify;
     background: #ffffff;
+    line-height: 1.5rem;
 
      // mobile
         @media only screen 
