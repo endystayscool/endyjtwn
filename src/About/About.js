@@ -166,21 +166,20 @@ function About() {
                     <p>I'm Endy,
                     a Bremen based Software Developer hailing from Bangkok.
                     I'm a master's student in Digital Media at Bremen University and
-                    I'm also working as a Web and iOS Developer in a software company in Bremen.
+                    I'm also working as a Web and iOS Developer in a software company in Germany.
                     </p>
                     <p>
                         Before now, after I graduated in Computer Science major in Computer Graphics from Thammasat University,
                         I worked as a Front-End Web Developer in Bangkok for 2 years by using Javascript + HTML + CSS with React and Angular 👩🏻‍💻.
-                        And expanded my career path to work as a Full-Stack Developer in Bangkok for 1 year using Node.js along with GCP
-                        since the company is the premier partner with Google.
+                        I expanded my career path to work as a Full-Stack Developer in Bangkok for 1 year using Node.js along with GCP.
                         I also took internships as a Front-End Developer and Digital Marketer in Macedonia and Ukraine.
-                        Those professional experiences enhance my communication, and problem-solving skills and prompted me to develop a basic understanding of the best practices in programming.
+                        Those professional experiences enhance my communication, and problem-solving skills and prompted me to develop an advance understanding of the best practices in programming.
                         </p>
-                    <p>
+                    {/* <p>
                         My obsession with technology and innovation began after I was a Student Volunteer at the SIGGRAPH conference in Macao (2016).
                         That experience enhances my interest in computer graphics, especially Creative Coding. Seeing many exceptional pieces of research
                         makes me want to create expressive and interactive technology that allows me to express my creativity together with programming skills.
-                        </p>
+                        </p> */}
                     <p>
                         In my spare time, I love playing billiards, skateboarding, surfing 🏄🏽‍♀️, and hanging out with my friends.
                         I am also experimenting with projection mapping on audio-visual art using Touchdesigner.
