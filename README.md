@@ -1,6 +1,6 @@
 ## My Website
 
-contained portfolio and front-end skill with React.
+contained portfolio and front-end skill using React.
 
 ## Available Scripts
 
