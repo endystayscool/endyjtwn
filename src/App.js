@@ -15,7 +15,7 @@ function App() {
 
   if (window.location.pathname === '/') {
     setTimeout(() => {
-      window.location.href = "https://www.endyjtwn.com/about";
+      window.location.href = "https://www.endyjtwn.me/about";
     }, 1000);
   }
 
