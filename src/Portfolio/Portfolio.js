@@ -18,6 +18,7 @@ function Portfolio() {
                     <p>
                         My works, playgrounds, and experiments. 👩🏻‍🔬
                     </p>
+                    <a href="https://www.figma.com/file/yb9tBAMaDRyesRXqctoLMs/DM-ST?node-id=0%3A1" target="_blank">design document</a>
                 </div>
             </div>
             <div className="video-wrapper">

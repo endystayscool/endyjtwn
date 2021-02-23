@@ -80,7 +80,7 @@ function Menu() {
                             {type}
                         </Tab>
                     ))}
-                    <Link className="sub-header-r" to="/jatawan_kruesilp_CV.pdf" target="_blank" download>resume</Link>
+                    <a className="sub-header-r" href="https://drive.google.com/file/d/1ENr-a4zKseY0GjgmOPu2KE2L36ZlLQNT/view?usp=sharing" target="_blank">resume</a>
                 </div>
             }
 
